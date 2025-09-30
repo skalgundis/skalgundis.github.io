@@ -518,12 +518,32 @@ html {
   .top-nav .nav-right a:active {
     transform: translateY(1px);
   }
+
   
   /* accessible focus outline (optional but recommended) */
   .top-nav .nav-right a:focus-visible {
     outline: 2px solid rgba(255,111,97,.35);
     outline-offset: 2px;
   }
+
+  @media (max-width: 768px) {
+    .top-nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+  
+    .nav-right {
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+      gap: 0.75rem 1rem; /* tighter spacing */
+    }
+  
+    .nav-right a {
+      margin-left: 0;
+    }
+  }
+  
   
   #talks ul {
     margin: 0;
@@ -533,5 +553,96 @@ html {
   #talks li {
     margin-bottom: 0.5rem;
     color: #444;
+  }
+  
+  @media (max-width: 768px) {
+    .timeline li {
+      grid-template-columns: 1fr; /* single column */
+      margin-bottom: 2rem;
+    }
+  
+    .timeline-date {
+      justify-content: flex-start;
+      padding: 0;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+  
+    .timeline-line {
+      display: none; /* hide vertical line on mobile */
+    }
+  
+    .timeline-content {
+      padding-left: 0; /* no offset */
+    }
+  }
+/* Position hamburger on right */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  /* Hamburger button */
+  .menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: auto; /* push it to the right */
+  }
+  .menu-btn span {
+    height: 3px;
+    width: 100%;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Mobile nav dropdown */
+  @media (max-width: 768px) {
+    .menu-btn {
+      display: flex;
+    }
+  
+    .nav-right {
+      position: absolute;
+      top: 60px;
+      right: 0; /* align dropdown to the right */
+      width: 200px;
+      background: #fff;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      padding: 0.5rem 1rem;
+      display: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  
+    .nav-right a {
+      display: block;
+      width: 100%;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .nav-right.active {
+      display: flex;
+    }
+  
+    /* Animate hamburger into X */
+    .menu-btn.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-btn.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
   }
   

@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".top-nav .nav-right a");
+    const menuBtn = document.getElementById('menu-btn');
+    const navRight = document.getElementById('nav-right');
   
+    // 🔹 Scroll-based highlighting
     window.addEventListener("scroll", () => {
       let current = "";
   
@@ -14,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
   
-      // ✅ Handle "bottom of page" case
+      // ✅ Handle bottom-of-page case
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
         const lastSection = sections[sections.length - 1];
         current = lastSection.getAttribute("id");
@@ -27,17 +30,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
+  
+    // 🔹 Hamburger toggle
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('active');
+      navRight.classList.toggle('active');
+    });
+  
+    // 🔹 Close menu when a link is clicked (mobile)
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuBtn.classList.remove('active');
+        navRight.classList.remove('active');
+      });
+    });
   });
-
-  <script>
-  document.addEventListener('scroll', () => {
-    const nav = document.querySelector('.top-nav');
-    if (window.scrollY > 10) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  });
-</script>
-
   

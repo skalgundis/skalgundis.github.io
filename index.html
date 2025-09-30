@@ -12,12 +12,32 @@
 </head>
 
 <body>
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <a href="#hero" class="logo">
+                <img src="static/images/robot-person.svg" alt="Logo" class="nav-logo">
+                <span>Srinidhi</span>
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="#bio">Bio</a>
+            <a href="#publications">Publications</a>
+            <a href="#mentorship">Mentorship</a>
+            <a href="#featured-videos">Featured Videos</a>
+        </div>
+    </nav>
+
     <main class="container">
 
-        <section class="hero">
+        <section id="hero" class="hero">
             <div class="hero-left">
                 <h1>Srinidhi Kalgundi Srinivas</h1>
-                <p>Trying to help robots perceive our world.</p>
+                <div class="tagline-wrapper">
+                    <img src="static/images/robot-person.svg" alt="Custom Artwork" class="hero-art-inline">
+                    <p class="hero-tagline">Trying to help robots perceive and interact with our world.</p>
+                </div>
+
                 <!-- <img src="static/images/robot-person.svg" alt="Custom Artwork" class="hero-art"> -->
                 <p class="hero-links">
                     <a href="https://www.linkedin.com/in/srinidhibh/" target="_blank">LinkedIn</a> |
@@ -33,28 +53,120 @@
         </section>
 
         <!-- About -->
-        <section id="experience">
-            <h2>Experience</h2>
+        <section id="bio">
+            <h2>Brief Bio</h2>
             <p>
-                I’m a Robotics Perception Research Scientist in the <a href="https://www.research.autodesk.com/research-areas/science/robotics/"
-                target="_blank"> Robotics Lab</a> at Autodesk Research, where I help robots perceive and
+                I’m a Robotics Perception Research Scientist in the
+                <a href="https://www.research.autodesk.com/research-areas/science/robotics/" target="_blank">Robotics
+                    Lab</a> at Autodesk Research, where I help robots perceive and
                 interact with the world. I build datasets, train models for object localization and grasping, work on
                 general scene understanding, and mentor interns along the way.
             </p>
             <p>
                 Before this, I interned at
-                Siemens Technology on <a href="https://www.siemens.com/global/en/products/automation/topic-areas/tia/future-topics/simatic-robotics-ai.html"
-                target="_blank">robotic bin-picking</a>,
-                worked as a Graduate Student Researcher in UC San Diego’s 
+                Siemens Technology on <a
+                    href="https://www.siemens.com/global/en/products/automation/topic-areas/tia/future-topics/simatic-robotics-ai.html"
+                    target="_blank">robotic bin-picking</a>,
+                worked as a Graduate Student Researcher in UC San Diego’s
                 <a href="https://www.avl.ucsd.edu" target="_blank">Autonomous Vehicle Laboratory
                     (AVL)</a>
                 under <a href="https://hichristensen.com/" target="_blank">Prof. Henrik I. Christensen</a>
                 focusing on perception for autonomous vehicles, and was a Senior Software Engineer at Analog Devices
                 developing embedded software for automotive infotainment systems.
             </p>
+            <p>
+                I hold a masters degree in Electrical and Computer Engineering from the
+                University of California San Diego, where I specialized in Intelligent Systems,
+                Robotics, and Control.
+            </p>
         </section>
 
 
+        <section>
+            <h2>Experience</h2>
+
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-date">Apr 2023 – Present</div>
+                    <div class="timeline-line">
+                        <div class="bottom-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-first-row">
+                            <h3>Autodesk Research</h3>
+                            <span class="timeline-location">San Francisco, CA</span>
+                        </div>
+                        <div class="timeline-second-row">
+                            <strong>Principal Reserarch Scientist, Robotics Perception</strong>
+                        </div>
+                        <p>
+                            Leading perception research for robotic automation, with emphasis on assembly, bin picking,
+                            and manufacturing applications.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="timeline-date">Jun 2022 – Sep 2022</div>
+                    <div class="timeline-line">
+                        <div class="bottom-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-first-row">
+                            <h3>Siemens Technology</h3>
+                            <span class="timeline-location">Berkeley, CA</span>
+                        </div>
+                        <div class="timeline-second-row">
+                            <strong>Advanced Robotics Intern</strong>
+                        </div>
+                        <p>
+                            Built an end-to-end perception and grasping pipeline for bin-picking applications in
+                            logistics automation.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="timeline-date">Nov 2021 – Mar 2023</div>
+                    <div class="timeline-line">
+                        <div class="bottom-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-first-row">
+                            <h3>Autonomous Vehicle Lab, UC San Diego</h3>
+                            <span class="timeline-location">San Diego, CA</span>
+                        </div>
+                        <div class="timeline-second-row">
+                            <strong>Graduate Student Researcher</strong>
+                        </div>
+                        <p>
+                            Developed Deep Neural Networks for modelling the scene around an autonomous car using camera
+                            and lidar data.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="timeline-date">Aug 2018 – Aug 2021</div>
+                    <div class="timeline-line">
+                        <div class="bottom-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-first-row">
+                            <h3>Analog Devices Inc.</h3>
+                            <span class="timeline-location">Bangalore, India</span>
+                        </div>
+                        <div class="timeline-second-row">
+                            <strong>Senior Software Engineer</strong>
+                        </div>
+                        <p>
+                            Designed and developed MISRA-C compliant software stack for Automotive Audio Bus (A²B) on
+                            ADI DSPs and led PoCs for customers.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
         <!-- Publications -->
         <section id="publications">
@@ -111,6 +223,15 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
 
             <!-- Mentorship Experience -->
             <section id="mentorship">
